@@ -1,0 +1,8 @@
+{
+    "errorLens.excludeBySource": [
+        "lib_archive/"
+    ],
+    "files.watcherExclude": {
+        "lib_archive/": true
+    }
+}

@@ -1,23 +1,16 @@
+import 'package:do_it_church/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+
+import 'services/auth_service.dart';
 
 void main() async {
-  runApp(
-    MaterialApp(
-      home: HomePage(),
-    ),
-  );
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-          child: Center(
-        child: Text('home'),
-      )),
-    );
-  }
+  runApp(GetMaterialApp.router(
+    title: "Do it church",
+    initialBinding: BindingsBuilder(() {
+      Get.put(AuthService());
+    }),
+    getPages: AppPages.routes,
+  ));
 }
