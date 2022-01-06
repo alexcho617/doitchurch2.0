@@ -6,7 +6,7 @@ import 'package:do_it_church/components/ScreenDivider.dart';
 import 'package:do_it_church/components/notice.dart';
 import 'package:do_it_church/screens/home.dart';
 import 'package:do_it_church/screens/notice_detail.dart';
-import 'package:do_it_church/constants.dart';
+import 'package:do_it_church/constants/texts.dart';
 import 'package:do_it_church/screens/notice_new.dart';
 import 'package:do_it_church/services/myfire.dart';
 import 'package:flutter/material.dart';

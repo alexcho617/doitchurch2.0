@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:do_it_church/components/counselling.dart';
-import 'package:do_it_church/constants.dart';
+import 'package:do_it_church/constants/texts.dart';
 
 class CounsellingEditRoute extends StatefulWidget {
   CounsellingEditRoute({required this.counsellingId});
