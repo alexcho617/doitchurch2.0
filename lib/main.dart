@@ -1,8 +1,9 @@
+import 'package:do_it_church/screens/register.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() async {
-  runApp(HomeRoute());
+  runApp(RegisterView());
 }
 
 class HomeRoute extends StatelessWidget {
