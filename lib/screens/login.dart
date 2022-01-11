@@ -1,3 +1,4 @@
+import 'package:do_it_church/screens/register.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,7 @@ class LoginView extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            SizedBox( 
+            SizedBox(
               height: 114,
             ),
             Image.asset(
@@ -33,13 +34,14 @@ class LoginView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 48.0, vertical: 0),
-                    child: CustomTextField(phoneController, "휴대폰 번호",14),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 48.0, vertical: 0),
+                    child: CustomTextField(phoneController, "휴대폰 번호", 14),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 48.0, vertical: 0),
-                    child: RoundButtonColorBackground((){},"로그인",15),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 48.0, vertical: 0),
+                    child: RoundButtonColorBackground(() {}, "로그인", 15),
                   ),
                   Container(
                     width: 300,
@@ -58,7 +60,11 @@ class LoginView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text("두잇처치가 처음이신가요?"),
-                      TextButton(onPressed: () {}, child: Text("회원가입")),
+                      TextButton(
+                          onPressed: () {
+                            Get.to(RegisterView());
+                          },
+                          child: Text("회원가입")),
                       SizedBox(
                         width: 98,
                       )

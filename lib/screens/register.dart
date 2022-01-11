@@ -10,10 +10,12 @@ class RegisterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           '가입코드 입력하기',
-          style: TextStyle(color: Colors.black, fontSize: 24.52),
+          style: TextStyle(color: Colors.black, fontSize: 18),
         ),
+        elevation: 0,
       ),
       body: SafeArea(
         child: Padding(
