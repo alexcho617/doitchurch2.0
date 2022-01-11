@@ -95,3 +95,47 @@ TextField CustomTextField(controller, hint, double fontsize) {
     ),
   );
 }
+
+
+Widget TextFieldWidget(String title, String hint) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(title),
+      TextField(
+        decoration: InputDecoration(hintText: hint),
+      )
+    ],
+  );
+}
+
+//radio widget
+Widget RRadioWidget(
+  int? isSelected,
+  var controllerValue,
+  List<String> choice,
+) {
+  return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        for (int i = 0; i < choice.length; i++)
+          Row(
+            children: [
+              Radio<int>(
+                value: i + 1,
+                groupValue: isSelected,
+                onChanged: (int? value) {
+                  setState(() => isSelected = value);
+                  controllerValue = choice[i];
+                },
+              ),
+              Text(
+                choice[i],
+              ),
+            ],
+          ),
+      ],
+    );
+  });
+}

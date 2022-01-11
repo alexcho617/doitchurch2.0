@@ -59,12 +59,12 @@ class LoginView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text("두잇처치가 처음이신가요?"),
+                      Text("두잇처치가 처음이신가요?",style: TextStyle(fontSize: 14)),
                       TextButton(
                           onPressed: () {
                             Get.to(RegisterView());
                           },
-                          child: Text("회원가입")),
+                          child: Text("회원가입",style: TextStyle(fontSize: 14),)),
                       SizedBox(
                         width: 98,
                       )
@@ -73,8 +73,8 @@ class LoginView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text("부서관리자이신가요?"),
-                      TextButton(onPressed: () {}, child: Text("등록하기")),
+                      Text("부서관리자이신가요?",style: TextStyle(fontSize: 14)),
+                      TextButton(onPressed: () {}, child: Text("등록하기",style: TextStyle(fontSize: 14))),
                       SizedBox(
                         width: 98,
                       )
