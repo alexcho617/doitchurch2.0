@@ -35,9 +35,12 @@ class LoginView extends StatelessWidget {
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 48.0, vertical: 0),
-                    child: textField(phoneController, "휴대폰 번호"),
+                    child: CustomTextField(phoneController, "휴대폰 번호",14),
                   ),
-                  ElevatedButton(onPressed: () {}, child: Text("버튼")),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 48.0, vertical: 0),
+                    child: RoundButtonColorBackground((){},"로그인",15),
+                  ),
                   Container(
                     width: 300,
                     child: Divider(

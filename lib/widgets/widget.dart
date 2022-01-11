@@ -76,7 +76,7 @@ ElevatedButton RoundButtonColorBackground(
 }
 
 //textfield
-TextField textField(controller, hint) {
+TextField CustomTextField(controller, hint, double fontsize) {
   return TextField(
     controller: controller,
     decoration: InputDecoration(
@@ -86,7 +86,7 @@ TextField textField(controller, hint) {
       fillColor: Color(0xFFF2F4F6),
       filled: true,
       labelText: hint,
-      //labelStyle: TextStyle()
+      labelStyle: TextStyle(fontSize: fontsize)
     ),
   );
 }
