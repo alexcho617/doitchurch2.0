@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'screens/login.dart';
+import 'screens/register.dart';
 
 void main() async {
   runApp(
@@ -16,7 +17,7 @@ void main() async {
         theme: BasicTheme,
         title: 'DoItChurch Navigation',
         // home: InitializerWidget(),
-        home: RegisterDetailView(),
+        home: RegisterView(),
       ),
     ),
   );
