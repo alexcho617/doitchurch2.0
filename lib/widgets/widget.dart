@@ -80,8 +80,12 @@ TextField CustomTextField(controller, hint, double fontsize) {
   return TextField(
     controller: controller,
     decoration: InputDecoration(
+      enabledBorder: const OutlineInputBorder(
+        borderSide: const BorderSide(color: Colors.transparent, width: 2.0),
+        borderRadius: BorderRadius.all(Radius.circular(50)),
+      ),
       border: OutlineInputBorder(
-        borderSide: BorderSide(color: Color(0xFFF2F4F6)),
+        borderSide: BorderSide(color: Colors.transparent , width: 2.0),
         borderRadius: BorderRadius.all(Radius.circular(50)),
       ),
       fillColor: Color(0xFFF2F4F6),
