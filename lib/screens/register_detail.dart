@@ -7,6 +7,8 @@ class RegisterDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int? selectedRadio = -1;
+    String? selectedGender = 'Unknown';
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -30,6 +32,7 @@ class RegisterDetailView extends StatelessWidget {
               ),
               TextFieldWidget('인증번호', '인증번호 입력'),
               TextFieldWidget('생년월일', '일/월/년도'),
+              RadioWidget(selectedRadio, selectedGender, ['남자', '여자']),
               RoundButtonWhiteBackground(_startLogin, '두잇처치 시작하기', 18.0.sp)
             ],
           ),
@@ -57,4 +60,35 @@ Widget TextFieldWidget(String title, String hint) {
       )
     ],
   );
+}
+
+//radio widget
+Widget RadioWidget(
+  int? isSelected,
+  var controllerValue,
+  List<String> choice,
+) {
+  return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        for (int i = 0; i < choice.length; i++)
+          Row(
+            children: [
+              Radio<int>(
+                value: i + 1,
+                groupValue: isSelected,
+                onChanged: (int? value) {
+                  setState(() => isSelected = value);
+                  controllerValue = choice[i];
+                },
+              ),
+              Text(
+                choice[i],
+              ),
+            ],
+          ),
+      ],
+    );
+  });
 }
