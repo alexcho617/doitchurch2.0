@@ -81,6 +81,7 @@ TextField CustomTextField(controller, hint, double fontsize) {
     controller: controller,
     decoration: InputDecoration(
       border: OutlineInputBorder(
+        borderSide: BorderSide(color: Color(0xFFF2F4F6)),
         borderRadius: BorderRadius.all(Radius.circular(50)),
       ),
       fillColor: Color(0xFFF2F4F6),

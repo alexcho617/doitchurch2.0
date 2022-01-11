@@ -2,6 +2,7 @@ import 'package:do_it_church/widgets/widget.dart';
 import 'package:flutter/material.dart';
 
 class RegisterView extends StatelessWidget {
+  final textcontroller = TextEditingController();
   RegisterView({Key? key}) : super(key: key);
   final List<String> role = ['교역자', '교사', '학부모'];
   int isSelected = 0;
@@ -31,15 +32,10 @@ class RegisterView extends StatelessWidget {
               SizedBox(
                 height: 11,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(22.5)),
-                    //TODO:
-                    // borderSide: BorderSide(color: Colors.transparent),
-                  ),
-                  hintText: '코드입력하기',
-                ),
+              CustomTextField(
+                textcontroller,
+                '코드입력하기',
+                14
               ),
               SizedBox(
                 height: 21,
