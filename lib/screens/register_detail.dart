@@ -1,3 +1,4 @@
+import 'package:do_it_church/constants/colors.dart';
 import 'package:do_it_church/widgets/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,10 +31,44 @@ class RegisterDetailView extends StatelessWidget {
                   )
                 ],
               ),
-              TextFieldWidget('인증번호', '인증번호 입력'),
+              Row(
+                children: [
+                  Container(
+                    width: 200.w,
+                    child: TextFieldWidget('인증번호', '인증번호 입력'),
+                  ),
+                  Container(
+                    width: 95.w,
+                    child: RoundButtonWhiteBackground(
+                        _startPhoneAuth, '인증번호 전송', 11.0.sp),
+                  )
+                ],
+              ),
               TextFieldWidget('생년월일', '일/월/년도'),
+              Text('성별'),
               RadioWidget(selectedRadio, selectedGender, ['남자', '여자']),
-              RoundButtonWhiteBackground(_startLogin, '두잇처치 시작하기', 18.0.sp)
+              Text('약관동의'),
+              Container(
+                height: 150,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 1,
+                    color: LightTextColor,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(2.0),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 150.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RoundButtonWhiteBackground(_startLogin, '두잇처치 시작하기', 18.0.sp),
+                ],
+              )
             ],
           ),
         ),
@@ -70,7 +105,7 @@ Widget RadioWidget(
 ) {
   return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         for (int i = 0; i < choice.length; i++)
           Row(
