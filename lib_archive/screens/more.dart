@@ -1,4 +1,4 @@
-import 'package:do_it_church/constants.dart';
+import 'package:do_it_church/constants/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
