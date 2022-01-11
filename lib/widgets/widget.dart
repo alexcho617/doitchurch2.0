@@ -65,7 +65,7 @@ ElevatedButton RoundButtonColorBackground(
       backgroundColor: MaterialStateProperty.all<Color>(PrimaryColor),
       side: MaterialStateProperty.all(
         BorderSide(
-          color: Colors.white,
+          color: PrimaryColor,
           width: 2.0,
         ),
       ),
@@ -80,7 +80,12 @@ TextField CustomTextField(controller, hint, double fontsize) {
   return TextField(
     controller: controller,
     decoration: InputDecoration(
+      enabledBorder: const OutlineInputBorder(
+        borderSide: const BorderSide(color: Colors.transparent, width: 2.0),
+        borderRadius: BorderRadius.all(Radius.circular(50)),
+      ),
       border: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.transparent , width: 2.0),
         borderRadius: BorderRadius.all(Radius.circular(50)),
       ),
       fillColor: Color(0xFFF2F4F6),
