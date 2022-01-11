@@ -1,8 +1,11 @@
+import 'package:do_it_church/widgets/widget.dart';
 import 'package:flutter/material.dart';
 
 class RegisterView extends StatelessWidget {
-  const RegisterView({Key? key}) : super(key: key);
-
+  RegisterView({Key? key}) : super(key: key);
+  final List<String> role = ['교역자', '교사', '학부모'];
+  int isSelected = 0;
+  String temp ='';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,6 +48,8 @@ class RegisterView extends StatelessWidget {
                 '역할',
                 style: TextStyle(fontSize: 14, color: Colors.black),
               ),
+              RadioWidget(isSelected, temp, role, TextStyle(fontSize: 16)),        
+              SizedBox(height: 33,),
               
             ],
           ),
