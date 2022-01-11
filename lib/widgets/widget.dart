@@ -2,14 +2,15 @@ import 'package:do_it_church/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 ElevatedButton RoundButtonWhiteBackground(
-    VoidCallback callback, String buttonTitle, double fontSize,
-    
-    ) {
+  VoidCallback callback,
+  String buttonTitle,
+  double fontSize,
+) {
   return ElevatedButton(
     onPressed: callback,
     child: Text(
       buttonTitle,
-      style: TextStyle(color: PrimaryColor,fontSize: fontSize),
+      style: TextStyle(color: PrimaryColor, fontSize: fontSize),
     ),
     style: ButtonStyle(
       backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
@@ -24,12 +25,12 @@ ElevatedButton RoundButtonWhiteBackground(
 }
 
 ElevatedButton RoundButtonColorBackground(
-    VoidCallback callback, String buttonTitle) {
+    VoidCallback callback, String buttonTitle, double fontSize) {
   return ElevatedButton(
     onPressed: callback,
     child: Text(
       buttonTitle,
-      style: TextStyle(color: Colors.white),
+      style: TextStyle(color: Colors.white, fontSize: fontSize),
     ),
     style: ButtonStyle(
       backgroundColor: MaterialStateProperty.all<Color>(PrimaryColor),
