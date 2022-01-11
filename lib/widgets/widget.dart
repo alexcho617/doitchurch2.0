@@ -1,6 +1,35 @@
 import 'package:do_it_church/constants/colors.dart';
 import 'package:flutter/material.dart';
 
+//radio widget
+Widget RadioWidget(int? isSelected, var controllerValue, List<String> choice,
+    TextStyle textStyle) {
+  return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        for (int i = 0; i < choice.length; i++)
+          Row(
+            children: [
+              Radio<int>(
+                value: i + 1,
+                groupValue: isSelected,
+                onChanged: (int? value) {
+                  setState(() => isSelected = value);
+                  controllerValue = choice[i];
+                },
+              ),
+              Text(
+                choice[i],
+                style: textStyle,
+              ),
+            ],
+          ),
+      ],
+    );
+  });
+}
+
 ElevatedButton RoundButtonWhiteBackground(
   VoidCallback callback,
   String buttonTitle,
@@ -42,6 +71,22 @@ ElevatedButton RoundButtonColorBackground(
       ),
       shape: MaterialStateProperty.all(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
+    ),
+  );
+}
+
+//textfield
+TextField CustomTextField(controller, hint, double fontsize) {
+  return TextField(
+    controller: controller,
+    decoration: InputDecoration(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(50)),
+      ),
+      fillColor: Color(0xFFF2F4F6),
+      filled: true,
+      labelText: hint,
+      labelStyle: TextStyle(fontSize: fontsize)
     ),
   );
 }
