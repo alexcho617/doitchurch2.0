@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:do_it_church/constants.dart';
+import 'package:do_it_church/constants/texts.dart';
 import 'login.dart';
 
 class FindId extends StatefulWidget {

@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../components/customUser.dart';
-import 'package:do_it_church/constants.dart';
+import 'package:do_it_church/constants/texts.dart';
 import 'landing_route.dart';
 import 'package:intl/intl.dart';
 
