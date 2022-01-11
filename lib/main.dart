@@ -17,7 +17,7 @@ void main() async {
         theme: BasicTheme,
         title: 'DoItChurch Navigation',
         // home: InitializerWidget(),
-        home: RegisterView(),
+        home: LoginView(),
       ),
     ),
   );
