@@ -50,7 +50,19 @@ class RegisterView extends StatelessWidget {
               ),
               RadioWidget(isSelected, temp, role, TextStyle(fontSize: 16)),        
               SizedBox(height: 33,),
-              
+              SizedBox(
+                height: 45,
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [Expanded(child: RoundButtonColorBackground((){}, '코드 인증하기', 15))] ),
+                
+              ),
+              SizedBox(height: 42,),
+              Divider(thickness: 1, color: Color(0xffB6B6B6),),
+              SizedBox(height: 55,),
+              Text('알림', style: TextStyle(fontSize: 14),),
+              SizedBox(height: 16,),
+              Text('● 관리자에게 전달받으신 코드를 복사 → 붙여넣기 해주세요.\n\n● 가입코드를 분실하신 경우, 문의는 해당교회 관리자에게 해주세요.', style: TextStyle(fontSize: 10, color: Colors.black),)
             ],
           ),
         ),

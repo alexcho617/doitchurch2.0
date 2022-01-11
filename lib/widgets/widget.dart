@@ -63,7 +63,7 @@ ElevatedButton RoundButtonColorBackground(
       backgroundColor: MaterialStateProperty.all<Color>(PrimaryColor),
       side: MaterialStateProperty.all(
         BorderSide(
-          color: Colors.white,
+          color: PrimaryColor,
           width: 2.0,
         ),
       ),
